@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    background:#fff;
+    width:450px;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+.radio-group,
+.checkbox-group{
+    margin-top:8px;
+}
+
+.radio-group label,
+.checkbox-group label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:normal;
+    margin:8px 0;
+}
+
+.radio-group input,
+.checkbox-group input{
+    width:auto;
+}
+
+.buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:25px;
+}
+
+button{
+    width:48%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button[type="submit"]{
+    background:#007bff;
+    color:white;
+}
+
+button[type="submit"]:hover{
+    background:#0056b3;
+}
+
+button[type="reset"]{
+    background:#dc3545;
+    color:white;
+}
+
+button[type="reset"]:hover{
+    background:#b52b38;
+}
