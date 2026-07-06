@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration Form</h1>
+
+        <form id="studentForm">
+
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                maxlength="30"
+                required>
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required>
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                minlength="6"
+                required>
+
+            <label for="age">Age</label>
+            <input
+                type="number"
+                id="age"
+                min="16"
+                max="100"
+                required>
+
+            <label for="dob">Date of Birth</label>
+            <input
+                type="date"
+                id="dob"
+                required>
+
+            <label>Gender</label>
+
+            <div class="radio-group">
+                <input type="radio" name="gender" value="Male" required>
+                Male
+
+                <input type="radio" name="gender" value="Female">
+                Female
+            </div>
+
+            <label for="department">Department</label>
+
+            <select id="department">
+
+                <option>CSE</option>
+                <option>IT</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>Mechanical</option>
+
+            </select>
+
+            <label>Skills</label>
+
+            <div class="checkbox-group">
+
+                <input type="checkbox"> HTML
+
+                <input type="checkbox"> CSS
+
+                <input type="checkbox"> JavaScript
+
+            </div>
+
+            <div class="agree">
+
+                <input type="checkbox" id="agree" required>
+
+                <label for="agree">
+                    I agree to the terms and conditions.
+                </label>
+
+            </div>
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
