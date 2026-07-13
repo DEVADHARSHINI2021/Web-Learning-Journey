@@ -1,0 +1,36 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#eef2ff;
+}
+
+.container{
+    width:400px;
+    margin:60px auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 10px gray;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.option{
+    display:block;
+    margin:10px 0;
+}
+
+.correct{
+    background:lightgreen;
+}
+
+.wrong{
+    background:#ffb3b3;
+}
