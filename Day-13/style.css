@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#1f2937;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    width:350px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+h1{
+    margin-bottom:25px;
+}
+
+#clock{
+    font-size:40px;
+    font-weight:bold;
+    color:#2563eb;
+    margin-bottom:30px;
+}
+
+.alarm-box h2{
+    margin-bottom:15px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    font-size:16px;
+}
+
+button{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+#clearAlarm{
+    background:#ef4444;
+}
+
+#clearAlarm:hover{
+    background:#dc2626;
+}
+
+#alarmStatus{
+    margin-top:20px;
+    font-weight:bold;
+}
