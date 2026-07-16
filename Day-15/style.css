@@ -14,8 +14,8 @@ body{
 }
 
 .container{
-    background:white;
     width:700px;
+    background:white;
     padding:30px;
     border-radius:12px;
     box-shadow:0 5px 15px rgba(0,0,0,.2);
@@ -30,28 +30,28 @@ h1{
     background:#f4f4f4;
     padding:15px;
     border-radius:8px;
+    line-height:1.8;
     margin-bottom:20px;
-    line-height:1.6;
 }
 
 textarea{
     width:100%;
-    height:120px;
+    height:130px;
     padding:15px;
-    resize:none;
     font-size:18px;
+    resize:none;
 }
 
 button{
-    margin-top:20px;
     width:100%;
+    margin-top:20px;
     padding:12px;
     border:none;
     background:#4f46e5;
     color:white;
-    cursor:pointer;
     font-size:18px;
     border-radius:8px;
+    cursor:pointer;
 }
 
 button:hover{
@@ -61,6 +61,12 @@ button:hover{
 .result{
     display:flex;
     justify-content:space-between;
-    margin-top:25px;
+    margin-top:20px;
     font-size:20px;
+}
+
+#message{
+    margin-top:20px;
+    text-align:center;
+    color:green;
 }

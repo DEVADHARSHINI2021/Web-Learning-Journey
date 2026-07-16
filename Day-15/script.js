@@ -1,90 +1,99 @@
-const quote = document.getElementById("quote");
+const quoteText = document.getElementById("quote").textContent.trim();
+
 const input = document.getElementById("input");
 
-const time = document.getElementById("time");
-const wpm = document.getElementById("wpm");
-const accuracy = document.getElementById("accuracy");
-
-const restart = document.getElementById("restart");
+const timeEl = document.getElementById("time");
+const wpmEl = document.getElementById("wpm");
+const accuracyEl = document.getElementById("accuracy");
+const restartBtn = document.getElementById("restart");
+const message = document.getElementById("message");
 
 let startTime = null;
 let timer = null;
 
-input.addEventListener("input", () => {
+function updateStats(){
 
-    if(startTime===null){
-
-        startTime=Date.now();
-
-        timer=setInterval(updateTime,1000);
-
-    }
-
-    calculate();
-});
-
-function updateTime(){
+    if(startTime===null) return;
 
     let seconds=Math.floor((Date.now()-startTime)/1000);
 
-    time.textContent=seconds;
-
-}
-
-function calculate(){
+    timeEl.textContent=seconds;
 
     const typed=input.value;
-
-    const original=quote.textContent;
 
     let correct=0;
 
     for(let i=0;i<typed.length;i++){
 
-        if(typed[i]===original[i]){
+        if(typed[i]===quoteText[i]){
             correct++;
         }
 
     }
 
-    const acc=Math.round((correct/original.length)*100);
+    let accuracy=typed.length===0
+        ?100
+        :Math.round((correct/typed.length)*100);
 
-    accuracy.textContent=isNaN(acc)?0:acc;
+    accuracyEl.textContent=accuracy;
 
-    const elapsed=(Date.now()-startTime)/60000;
+    let minutes=(Date.now()-startTime)/60000;
 
-    const words=typed.trim().split(/\s+/).length;
+    let words=typed.trim()===""
+        ?0
+        :typed.trim().split(/\s+/).length;
 
-    const speed=Math.round(words/elapsed);
+    let wpm=minutes===0
+        ?0
+        :Math.round(words/minutes);
 
-    wpm.textContent=isNaN(speed)?0:speed;
+    wpmEl.textContent=wpm;
 
-    if(typed===original){
+    if(typed===quoteText){
 
         clearInterval(timer);
 
+        timer=null;
+
         input.disabled=true;
 
+        message.textContent="🎉 Completed! Great Job!";
     }
 
 }
 
-restart.addEventListener("click",()=>{
+input.addEventListener("input",()=>{
+
+    if(startTime===null){
+
+        startTime=Date.now();
+
+        timer=setInterval(updateStats,1000);
+
+    }
+
+    updateStats();
+
+});
+
+restartBtn.addEventListener("click",()=>{
 
     clearInterval(timer);
 
-    startTime=null;
-
     timer=null;
 
-    input.value="";
+    startTime=null;
 
     input.disabled=false;
 
-    time.textContent=0;
+    input.value="";
 
-    wpm.textContent=0;
+    timeEl.textContent=0;
+    wpmEl.textContent=0;
+    accuracyEl.textContent=100;
 
-    accuracy.textContent=0;
+    message.textContent="";
+
+    input.focus();
 
 });
