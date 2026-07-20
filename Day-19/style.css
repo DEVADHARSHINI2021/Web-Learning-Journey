@@ -1,0 +1,21 @@
+body{
+    margin:0;
+    padding:20px;
+    background:#f4f4f4;
+    font-family:Arial, sans-serif;
+    text-align:center;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+.controls{
+    margin-bottom:15px;
+}
+
+canvas{
+    border:2px solid black;
+    background:white;
+    cursor:crosshair;
+}
