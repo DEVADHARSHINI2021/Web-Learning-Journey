@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanban Board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Day 20 - Kanban Board</h1>
+
+<div class="board">
+
+<div class="column"
+ondragover="allowDrop(event)"
+ondrop="drop(event)">
+<h2>To Do</h2>
+
+<div class="task"
+draggable="true"
+id="task1"
+ondragstart="drag(event)">
+Learn JavaScript
+</div>
+
+<div class="task"
+draggable="true"
+id="task2"
+ondragstart="drag(event)">
+Build Projects
+</div>
+
+</div>
+
+
+<div class="column"
+ondragover="allowDrop(event)"
+ondrop="drop(event)">
+<h2>In Progress</h2>
+</div>
+
+<div class="column"
+ondragover="allowDrop(event)"
+ondrop="drop(event)">
+<h2>Done</h2>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
